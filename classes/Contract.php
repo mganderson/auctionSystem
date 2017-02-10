@@ -98,17 +98,6 @@ class Contract
             $formattedDispute = "";
         }
 
-
-        /*
-        $formattedPhoto = "";
-        if (empty($this->photoRefLink)){
-            $formattedPhoto = "No photo provided <br/>";
-        }
-        else{
-            $formattedPhoto = "<br/><a href='$this->photoRefLink'><img src='$this->photoRefLink'></a>";
-        }
-        */
-
         return "
                 <div style=\"text-align:center;\">
                 <h2>$this->title</h2>

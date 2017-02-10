@@ -6,11 +6,6 @@ import java.time.LocalDateTime;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
-//TODO redirect System.out to a file to maintain log of database changes
-//TODO put logic in an infinite loop / set periodic sleep time -> threads?
-
-
-
 public class CrawlerMain extends JFrame{
 	
 
@@ -71,7 +66,6 @@ public class CrawlerMain extends JFrame{
 		CrawlerLooper cl = new CrawlerLooper(connection);
 
 		//begin loop
-		
 		while(goOn){
 			cl.loop();
 		}

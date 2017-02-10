@@ -55,13 +55,7 @@ public class CrawlerLooper {
 		
 		//Iterate through the result, store values in variables, prepare query and insert new contracts in database
 		try {
-			while(successfulAuctionSet.next()){
-				/*
-				System.out.println(successfulAuctionSet.getString(1) + "," + successfulAuctionSet.getString(2) + 
-						"," + successfulAuctionSet.getString(3) + "," + successfulAuctionSet.getString(4) + 
-						"," + successfulAuctionSet.getString(5) + "," + successfulAuctionSet.getString(6));
-				*/
-				
+			while(successfulAuctionSet.next()){			
 				//Store values of each result row in variables
 				title = successfulAuctionSet.getString(1);
 				auctionFK = successfulAuctionSet.getString(2);
@@ -105,9 +99,7 @@ public class CrawlerLooper {
 				//Create update statement
 				String sqlUpdateStatement = String.format("UPDATE `Auction` "
 														+ "SET `active`=0, `successfullyCompleted`=1 "
-														+ "WHERE `auctionPK`=%s ", auctionFK);
-				//System.out.println(sqlUpdateStatement);
-				
+														+ "WHERE `auctionPK`=%s ", auctionFK);				
 				//Execute update statement
 				updateAuctonStatement.executeUpdate(sqlUpdateStatement);
 				//Print confirmation of status update to log
@@ -117,10 +109,7 @@ public class CrawlerLooper {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		//FOR UNSUCCESSFUL AUCTIONS
-		//System.out.println("\nUnsuccessful auctions that have expired without a bid:");
-		
+			
 		//Instantiate a result set in preparation for SQL query results
 		ResultSet unsuccessfulAuctionSet = null;
 		try {
@@ -160,9 +149,7 @@ public class CrawlerLooper {
 				//Create update statement
 				String sqlUpdateStatement = String.format("UPDATE `Auction` "
 														+ "SET `active`=0, `successfullyCompleted`=0 "
-														+ "WHERE `auctionPK`=%s ", auctionFK);
-				//System.out.println(sqlUpdateStatement);
-				
+														+ "WHERE `auctionPK`=%s ", auctionFK);				
 				//Execute update statement
 				updateAuctonStatement2.executeUpdate(sqlUpdateStatement);
 				//Print confirmation of status update to log

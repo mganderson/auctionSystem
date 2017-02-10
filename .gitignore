@@ -39,3 +39,7 @@ Thumbs.db
 # IDE files #
 #######################
 .idea
+
+# Others #
+#######################
+config.php

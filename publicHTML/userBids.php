@@ -137,11 +137,7 @@ if($result->num_rows > 0) {
         $i+=1;
         echo "<hr class='style1'/>";
     }
-    /*
-    $row = $result->fetch_assoc();
-    $currentAuction = new Auction($row);
-    echo $currentAuction->displayAuctionHTML();
-    */
+
 }
 else{
     echo "Sorry, it looks like you haven't placed any bids yet. (Your User ID: " . $userPK . ")";

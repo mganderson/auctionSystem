@@ -40,6 +40,13 @@ Thumbs.db
 #######################
 .idea
 
-# Others #
+# IDE files #
+#######################
+*.svg
+*.png
+*.jpg
+*.jpeg
+
+# Other #
 #######################
 config.php

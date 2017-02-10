@@ -159,32 +159,6 @@ class auction
                 <b>Photo:  </b> $formattedPhoto <br/>
                 ";
     }
-/*
-    public function getLowBidAmt(){
-
-        if(is_null($this->lowBid)){
-            return $this->getMaxBidAmt();
-        }
-        else{
-            $bidPK = $this->getLowBid();
-            $sql = "SELECT * FROM auction_system.Bid
-                    WHERE bidPK = $bidPK";
-            $result=mysqli_query($conn, $sql);
-            if($result->num_rows > 0) {
-                while ($row = $result->fetch_assoc()) {
-                    $currentBid = new Bid($row);
-                    $lowBidAmt = $currentBid->getBidAmt();
-                    return $lowBidAmt;
-                }
-            }
-            else{
-                return "Error";
-            }
-
-
-        }
-    }
-*/
 
     /**
      * @return mixed

@@ -53,8 +53,6 @@ class BidWriter
                 echo "Error updating record: " . $conn->error;
             }
 
-            //END TEST SECTION
-
         }
         else{
             return false;

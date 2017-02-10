@@ -1,12 +1,6 @@
 <?php
 session_start();
 
-/*
- * Logged out users should still be able to search
-if (!isset($_SESSION['login_user'])) {
-    header('Location: ../publicHTML/login.php');
-}
-*/
 include "../classes/Auction.php";
 include "../classes/dbConnect.php";
 include '../publicHTML/navHeader.php';

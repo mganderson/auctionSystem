@@ -67,23 +67,7 @@ class userWriter
         $stmt->bind_param("ssssssssiis", $this->firstName, $this->lastName, $this->address1, $this->address2,
             $this->city, $this->state, $this->zip, $this->email, $this->rating, $this->suspended,
             $this->hashedPassword);
-        //Check to see if account already exists under email address
-        /*
-        $sql = "SELECT * FROM auction_system.User WHERE email = \"$this->email\"";
-        $result=mysqli_query($conn, $sql);
-        if($result->num_rows > 0){
-            throw new Exception("Account already exists for this email address");
-        }
-        //Execute query
-        else{
-            if($stmt->execute()){
-                return true;
-            }
-            else {
-                return false;
-            }
-        }
-        */
+
         if($stmt->execute()){
             return true;
         }

@@ -40,39 +40,3 @@ echo    '
         </div>
         ';
 include '../publicHTML/Footer.php';
-
-
-
-/*
-<!DOCTYPE html>
-
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="../style1.css">
-</head>
-<body>
-<?php include '../publicHTML/navHeader.php';?>
-<div class="info-container">
-
-    <?php
-    $userPK = $_SESSION["userPK"];
-    $sql = "SELECT * FROM auction_system.Auction WHERE auctionOwnerFK = \"$userPK\"";
-    $result=mysqli_query($this->conn, $sql);
-    if($result->num_rows > 0) {
-        $row = $result->fetch_assoc();
-        $currentAuction = new Auction($row);
-        echo $currentAuction->__toString();
-    }
-    else{
-        echo "No auctions found";
-    }
-
-    //echo "test";
-    ?>
-
-</div>
-</body>
-</html>
-*/
